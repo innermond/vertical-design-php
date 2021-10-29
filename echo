@@ -1,0 +1,19 @@
+#!/usr/bin/php
+<?php
+$route = [
+	'create_article',
+];
+enter_value:
+do {
+	$value = readline('enter an operation: '.PHP_EOL);
+} while(!is_numeric($value));
+$value = (int) $value;
+while (!isset($route[$value])) goto enter_value;
+$name = readline('enter a name: '.PHP_EOL);
+try {
+	include $route[$value].'.php';
+	(new CreateArticleOperation)('Hello', $name);
+} catch (Exception $e) {
+	echo 'Error happened'.PHP_EOL;
+	throw $e;
+}

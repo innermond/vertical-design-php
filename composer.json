@@ -1,0 +1,19 @@
+{
+    "name": "innermond/echo",
+    "description": "DDD practising",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+		"autoload": {
+			"psr-4": {
+					"Echoes\\": "src/Echo/",
+					"lib\\": "src/lib/"
+			 }
+    },
+    "authors": [
+        {
+            "name": "gabriel",
+            "email": "innermond@yahoo.com"
+        }
+    ]
+}
